@@ -1,5 +1,8 @@
 # Picnic Planner Application
 
+[Demo Video](https://github.com/NoorShaik683/infinite_analytics_bakend_task/assets/106299708/1aac666f-06c3-4428-9a92-96a56f1c685e)
+
+
 ## Technologies Used
 - **Python 3.x**
 - **Django 3.x**: Python web framework
