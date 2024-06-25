@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribe</title>
+</head>
+<body>
+    <h1>Subscribe for Weather Updates for {{ location.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="time_slot">Time Slot:</label>
+        <input type="datetime-local" id="time_slot" name="time_slot" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+</html>

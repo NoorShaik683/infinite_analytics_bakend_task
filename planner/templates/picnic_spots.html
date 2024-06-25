@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picnic Spots</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Picnic Spots in {{ location.name }}</h1>
+    <p>Current Temperature: {{ weather_data.hourly.temperature_2m.0 }}°C</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Distance (km)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for spot in picnic_spots %}
+                <tr>
+                    <td>{{ spot.name }}</td>
+                    <td>{{ spot.description }}</td>
+                    <td>{{ spot.distance }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'subscribe' location.id %}">Subscribe for Weather Updates</a>
+    <br>
+    <a href="{% url 'index' %}">Go to Home</a>
+
+</body>
+</html>

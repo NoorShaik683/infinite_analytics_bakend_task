@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picnic Planner</title>
+</head>
+<body>
+    <h1>Select a Location</h1>
+    <ul>
+        {% for location in locations %}
+            <li><a href="{% url 'picnic_spots' location.id %}">{{ location.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {%if not locations%}
+    <h2>Add Locations in Admin Portal</h2>
+    {%endif%}
+</body>
+</html>
